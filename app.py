@@ -33,7 +33,7 @@ mysql = MySQL(app)
 
 selected_allergens = []
 
-@app.route('/getstudentdetails', methods=['GET'])
+@app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')
 def getStudentDetails():
     if request.method == 'GET':
         print("hello world")
@@ -78,7 +78,7 @@ def getStudentDetails():
         return response
 
 
-@app.route('/form',methods=['GET'])
+@app.route('/form',methods=['GET'],endpoint='form')
 def form():
     code = '5000396015935'
     temp_url = "https://world.openfoodfacts.org/api/v0/product.json"
@@ -103,7 +103,7 @@ def form():
     print(type(pro['product']['ingredients_hierarchy']))
     return str(pro['product']['ingredients_hierarchy'])
 
-@app.route('/barcode_post', methods=['POST'])
+@app.route('/barcode_post', methods=['POST'],endpoint='barcode_post')
 @cross_origin()
 def barcode_post():
     if request.method == 'POST':

@@ -81,8 +81,8 @@ def getStudentDetails():
         for ele in res:
             list.append(ele[1])
         print(cursor.fetchall())
-        dict['name'] = list
-        return jsonify(dict)
+        #dict['name'] = list
+        return jsonify(name = list)
 
 
 @app.route('/', methods=['GET'])

@@ -82,13 +82,9 @@ def getStudentDetails():
         print(cursor.fetchall())
         return list
 
-"""
-@app.route('/getinfo', methods=['GET'])
+@app.route('/', methods=['GET'])
 def getInfo():
-    if request.method == 'GET':
-        list = ["sad","rfe"]
-        return list
-"""
+    return "Hello World"
 
 @app.route('/form',methods=['GET'])
 def form():

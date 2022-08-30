@@ -80,7 +80,7 @@ def getStudentDetails():
         for ele in res:
             list.append(ele[1])
         print(cursor.fetchall())
-        return list
+        return str(list)
 
 
 @app.route('/', methods=['GET'])

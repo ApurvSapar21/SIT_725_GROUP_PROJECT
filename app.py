@@ -74,7 +74,7 @@ def getStudentDetails():
         cnxn = pyodbc.connect(cnxn_str)
         cursor = cnxn.cursor()
         list = []
-        dict = dict()
+        dict = {"name": "jane doe", "salary": 9000, "email": "JaneDoe@pynative.com"}
         select_sql = "SELECT * FROM student"
         res = cursor.execute(select_sql)
         print(type(res))
@@ -82,7 +82,7 @@ def getStudentDetails():
             list.append(ele[1])
         print(cursor.fetchall())
         #dict['name'] = list
-        return jsonify(name = list)
+        return jsonify(dict)
 
 
 @app.route('/', methods=['GET'])

@@ -88,14 +88,6 @@ def getStudentDetails():
         return response
 
 
-@app.route('/', methods=['GET'])
-def getHelloWorld():
-    return "Hello World"
-
-@app.route('/getstring', methods=['GET'])
-def getString():
-    return "Hello World Hero"
-
 @app.route('/form',methods=['GET'])
 def form():
     code = '5000396015935'
@@ -172,7 +164,9 @@ def barcode_post():
 def getAllergendata():
     allergens = []
     demo = ["dairy","wheat"]
-    cursor = mysql.connection.cursor()
+    cnxn = pyodbc.connect(cnxn_str)
+    cursor = cnxn.cursor()
+    #cursor = mysql.connection.cursor()
     in_params = ','.join(['%s'] * len(selected_allergens))
     sql = "SELECT allergen_name,alternative_name FROM alternative_allergen_name WHERE allergen_name IN (%s)" % in_params
     cursor.execute(sql, selected_allergens)
@@ -183,7 +177,11 @@ def getAllergendata():
         allergens.append(y)
     print(allergens)
     cursor.close()
-    return allergens
+    response = jsonify({
+        "allergens": allergens
+    })
+    return response
+    #return allergens
 
 @app.route('/user_allergies', methods=['POST'])
 @cross_origin()

@@ -82,10 +82,11 @@ def getStudentDetails():
         print(cursor.fetchall())
         return list
 
+
 @app.route('/', methods=['GET'])
 def getHelloWorld():
     return "Hello World"
-    
+
 @app.route('/getstring', methods=['GET'])
 def getString():
     return "Hello World Hero"
@@ -113,7 +114,7 @@ def form():
         myResponse.raise_for_status()
     pro = openfoodfacts.products.get_product('5000396015935')
     print(type(pro['product']['ingredients_hierarchy']))
-    return pro['product']['ingredients_hierarchy']
+    return str(pro['product']['ingredients_hierarchy'])
 
 
 @app.route('/getinfo', methods=['GET'])

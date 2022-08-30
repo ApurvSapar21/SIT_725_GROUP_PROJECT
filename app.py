@@ -83,7 +83,7 @@ def getStudentDetails():
         return list
 
 @app.route('/', methods=['GET'])
-def getInfo():
+def getHelloWorld():
     return "Hello World"
 
 @app.route('/form',methods=['GET'])

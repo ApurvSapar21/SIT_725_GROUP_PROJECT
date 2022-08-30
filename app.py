@@ -113,13 +113,6 @@ def form():
     print(type(pro['product']['ingredients_hierarchy']))
     return str(pro['product']['ingredients_hierarchy'])
 
-
-@app.route('/getinfo', methods=['GET'])
-def getInfo():
-    if request.method == 'GET':
-        list = ["sad","rfe"]
-        return list
-
 @app.route('/barcode_post', methods=['POST'])
 @cross_origin()
 def barcode_post():

@@ -3,3 +3,7 @@ Flask>=2.0,<=2.1.1
 openfoodfacts
 flask_mysqldb
 mysql-connector-python
+flask_cors
+flask_mysqldb
+requests
+json

@@ -1,5 +1,5 @@
 import openfoodfacts.products
-from flask import Flask,render_template, request
+from flask import Flask,render_template, request,jsonify
 from flask_mysqldb import MySQL
 from flask_cors import CORS, cross_origin
 #from PIL import Image
@@ -74,13 +74,15 @@ def getStudentDetails():
         cnxn = pyodbc.connect(cnxn_str)
         cursor = cnxn.cursor()
         list = []
+        dict = dict()
         select_sql = "SELECT * FROM student"
         res = cursor.execute(select_sql)
         print(type(res))
         for ele in res:
             list.append(ele[1])
         print(cursor.fetchall())
-        return str(list)
+        dict['name'] = list
+        return jsonify(dict)
 
 
 @app.route('/', methods=['GET'])

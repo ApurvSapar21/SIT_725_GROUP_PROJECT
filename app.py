@@ -2,14 +2,11 @@ import openfoodfacts.products
 from flask import Flask,render_template, request
 from flask_mysqldb import MySQL
 from flask_cors import CORS, cross_origin
-from PIL import Image
-from pytesseract import pytesseract
+#from PIL import Image
+#from pytesseract import pytesseract
 import mysql.connector
-from mysql.connector import errorcode
 import requests
-from requests.auth import HTTPDigestAuth
 import json
-#from flask.ext.api import FlaskAPI
 import base64
 import io
 import pyodbc
@@ -92,6 +89,7 @@ def getInfo():
         list = ["sad","rfe"]
         return list
 """
+
 @app.route('/form',methods=['GET'])
 def form():
     code = '5000396015935'
@@ -214,47 +212,3 @@ def login():
         mysql.connection.commit()
         cursor.close()
         return f"Done!!"
-
-@app.route('/imagepost', methods=['POST'])
-@cross_origin()
-def imagepost():
-
-    if request.method == 'GET':
-        return "Login via the login Form"
-
-    if request.method == 'POST':
-        image = request.json
-        print(image)
-        data = image['image']
-        sliceddata = data[23:]
-        print(sliceddata)
-        sliceddata += "=" * ((4 - len(sliceddata) % 4) % 4)  # ugh
-        imgdata = base64.b64decode(sliceddata)
-
-        filename = 'sagar.jpg'
-        imagePath = ('D:\\base64toImageNewPath\\' + filename)
-        im = Image.open(io.BytesIO(base64.b64decode(sliceddata)))
-        im.save(imagePath, 'PNG')
-
-        # Defining paths to tesseract.exe
-        # and the image we would be using
-        path_to_tesseract = r"D:\tesseract\tesseract.exe"
-        #image_path = r"D:\download.jfif"
-        image_path = imagePath
-        # Opening the image & storing it in an image object
-        img = Image.open(image_path)
-
-        # Providing the tesseract executable
-        # location to pytesseract library
-        pytesseract.tesseract_cmd = path_to_tesseract
-
-        # Passing the image object to image_to_string() function
-        # This function will extract the text from the image
-        text = pytesseract.image_to_string(img)
-
-        # Displaying the extracted text
-        print(text[:-1])
-        print("hello world")
-
-
- 

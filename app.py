@@ -14,22 +14,6 @@ app = Flask(__name__)
 CORS(app)
 
 # Obtain connection string information from the portal
-
-config = {
-  'host':'foodallerserver.mysql.database.azure.com',
-  'port': '3306',
-  'user':'sagar_kudale',
-  'password':'#Siddhivinayak123',
-  'database':'demo',
-  'ssl_ca': 'D:/DigiCertGlobalRootG2.crt.pem',
-  'ssl_disabled':'False'
-}
-
-cnx = mysql.connector.connect(user="sagar_kudale", password="#Siddhivinayak123",
-                              host="foodallerserver.mysql.database.azure.com", port=3306,
-                              database="demo", ssl_ca="D:/DigiCertGlobalRootG2.crt.pem",
-                              ssl_disabled=False)
-
 cnxn_str = ("Driver={ODBC Driver 17 for SQL Server};"
             "Server=tcp:foodallergyserver.database.windows.net,1433;"
             "Database=foodallergydb;"
@@ -39,24 +23,6 @@ cnxn_str = ("Driver={ODBC Driver 17 for SQL Server};"
             "TrustServerCertificate=no;"
             "Connection Timeout=30;"
             )
-
-"""
-try: 
-   conn = mysql.connector.connect(**config)
-   print("Connection established")
-except mysql.connector.Error as err:
-  if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-    print("Something is wrong with the user name or password")
-  elif err.errno == errorcode.ER_BAD_DB_ERROR:
-    print("Database does not exist")
-  else:
-    print(err)
-else:
-  cursor = conn.cursor()
-"""
-# Create table
-#cursor.execute("CREATE TABLE inventory (id serial PRIMARY KEY, name VARCHAR(50), quantity INTEGER);")
-print("Finished creating table.")
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
@@ -71,9 +37,10 @@ selected_allergens = []
 def getStudentDetails():
     if request.method == 'GET':
         print("hello world")
+        allergens = []
         cnxn = pyodbc.connect(cnxn_str)
         cursor = cnxn.cursor()
-        list = []
+        """ list = []
         #dict = {"name": "jane doe", "salary": 9000, "email": "JaneDoe@pynative.com"}
         select_sql = "SELECT * FROM student"
         res = cursor.execute(select_sql)
@@ -81,9 +48,17 @@ def getStudentDetails():
         for ele in res:
             list.append(ele[1])
         print(cursor.fetchall())
+        """
+        demo = ["dairy", "wheat"]
+        in_params = ','.join(['%s'] * len(demo))
+        sql = "SELECT allergen_name,alternative_name FROM alternative_allergen_name WHERE allergen_name IN (%s)" % in_params
+        cursor.execute(sql, demo)
+        myallergens = cursor.fetchall()
+        for x, y in myallergens:
+            allergens.append(y)
         #dict['name'] = list
         response = jsonify({
-            "result": list
+            "result": allergens
         })
         return response
 
@@ -176,36 +151,6 @@ def getAllergendata():
     return response
     #return allergens
 
-@app.route('/user_allergies', methods=['POST'])
-@cross_origin()
-def user_allergies_post():
-
-    if request.method == 'POST':
-        user_data = ['wheat','sugar','salt','milk']
-        product_ingredent = ['water','mayo']
-        user_allergies = request.json
-        print(user_allergies)
-        #allergies_data = user_allergies['allergies']
-        for ele in user_allergies['allergies']:
-            if ele['Checked'] == True:
-                selected_allergens.append(ele['Name'])
-    print(selected_allergens)
-
-        #print("allergies data" + allergies_data)
-    return "none"
 
 
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    if request.method == 'GET':
-        return "Login via the login Form"
 
-    if request.method == 'POST':
-        id = request.form['id']
-        print(id)
-        name = request.form['name']
-        cursor = mysql.connection.cursor()
-        cursor.execute(''' INSERT INTO student VALUES(%s,%s)''', (id, name))
-        mysql.connection.commit()
-        cursor.close()
-        return f"Done!!"

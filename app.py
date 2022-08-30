@@ -85,6 +85,10 @@ def getStudentDetails():
 @app.route('/', methods=['GET'])
 def getHelloWorld():
     return "Hello World"
+    
+@app.route('/getstring', methods=['GET'])
+def getString():
+    return "Hello World Hero"
 
 @app.route('/form',methods=['GET'])
 def form():

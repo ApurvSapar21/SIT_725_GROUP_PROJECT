@@ -150,10 +150,22 @@ def getAllergendata():
     cnxn = pyodbc.connect(cnxn_str)
     cursor = cnxn.cursor()
     #cursor = mysql.connection.cursor()
-    in_params = ','.join(['%s'] * len(selected_allergens))
-    sql = "SELECT allergen_name,alternative_name FROM alternative_allergen_name WHERE allergen_name IN (%s)" % in_params
-    cursor.execute(sql, selected_allergens)
+    #in_params = ','.join(['%s'] * len(selected_allergens))
+    #sql = "SELECT allergen_name,alternative_name FROM alternative_allergen_name WHERE allergen_name IN (%s)" % in_params
+    #cursor.execute(sql, selected_allergens)
     #cursor.execute('''SELECT allergen_name FROM alternative_allergen_name WHERE allergen_name IN (%s)'''% in_params)
+    execu = cursor.execute(
+        """
+        Select 
+         allergen_name,
+         alternative_name
+        From
+            alternative_allergen_name
+        where
+         allergen_name in ({})
+        """.format(','.join("?" * len(selected_allergens))), selected_allergens)
+
+    #myallergens = cursor.fetchall()
     myallergens = cursor.fetchall()
     print(myallergens)
     for x,y in myallergens:

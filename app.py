@@ -50,11 +50,25 @@ def getStudentDetails():
         print(cursor.fetchall())
         """
         demo = ["dairy", "wheat"]
-        in_params = ','.join(['%s'] * len(demo))
-        sql = "SELECT allergen_name,alternative_name FROM alternative_allergen_name WHERE allergen_name IN (%s)" % in_params
+       # in_params = ','.join(['%s'] * len(demo))
+        #sql = "SELECT allergen_name,alternative_name FROM alternative_allergen_name WHERE allergen_name IN (%s)" % in_params
         #sql = "SELECT allergen_name,alternative_name FROM alternative_allergen_name WHERE allergen_name = 'dairy' "
-        cursor.execute(sql,demo)
+        #cursor.execute(sql,demo)
+        #myallergens = cursor.fetchall()
+
+        execu = cursor.execute(
+            """
+            Select 
+             allergen_name,
+             alternative_name
+            From
+                alternative_allergen_name
+            where
+             allergen_name in ({})
+            """.format(','.join("?" * len(demo))), demo)
+
         myallergens = cursor.fetchall()
+
         for x, y in myallergens:
             allergens.append(y)
         #dict['name'] = list

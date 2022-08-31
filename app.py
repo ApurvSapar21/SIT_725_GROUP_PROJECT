@@ -163,7 +163,7 @@ def getAllergendata():
             alternative_allergen_name
         where
          allergen_name in ({})
-        """.format(','.join("?" * len(demo))), demo)
+        """.format(','.join("?" * len(selected_allergens))), selected_allergens)
 
     #myallergens = cursor.fetchall()
     myallergens = cursor.fetchall()
@@ -175,6 +175,16 @@ def getAllergendata():
     return allergens
     #return allergens
 
-
+@app.route('/user_allergies', methods=['POST'])
+@cross_origin()
+def user_allergies_post():
+    if request.method == 'POST':
+        user_allergies = request.json
+        print(user_allergies)
+        for ele in user_allergies['allergies']:
+            if ele['Checked'] == True:
+                selected_allergens.append(ele['Name'])
+    print(selected_allergens)
+    return "none"
 
 

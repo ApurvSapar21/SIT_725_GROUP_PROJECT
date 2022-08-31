@@ -39,7 +39,7 @@ def HomePage():
 
 @app.route('/hp', methods=['GET'])
 def HomePagev2():
-    return render_template('templates/index.html')
+    return render_template('home.html')
 
 
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')

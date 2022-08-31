@@ -172,10 +172,7 @@ def getAllergendata():
         allergens.append(y)
     print(allergens)
     cursor.close()
-    response = jsonify({
-        "allergens": allergens
-    })
-    return response
+    return allergens
     #return allergens
 
 

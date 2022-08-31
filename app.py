@@ -35,13 +35,10 @@ mysql = MySQL(app)
 
 selected_allergens = []
 
-@app.route('/', methods=['GET'])
-def HomePage():
-    return "Hello Guys"
-
-@app.route('/hp')
-def HomePagev2():
-    return render_template('home-v2.html')
+@app.route('/')
+def HomePagev():
+    opening_slogan = 'As a Parent of Children with Food Allergies,\nShopping Has Never been Easier!'
+    return render_template('home-v2.html',result = opening_slogan)
 
 
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')

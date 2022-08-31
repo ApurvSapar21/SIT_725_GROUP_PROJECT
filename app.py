@@ -37,6 +37,10 @@ selected_allergens = []
 def HomePage():
     return "Hello Guys"
 
+@app.route('/hp', methods=['GET'])
+def HomePagev2():
+    return render_template('templates/index.html')
+
 
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')
 def getStudentDetails():

@@ -136,7 +136,7 @@ def barcode_post():
     barcode_allergens = jData['product']['ingredients_hierarchy']
 
     barcode_allergens = [x.split(':')[1] for x in barcode_allergens]
-    print(barcode_allergens)
+    print("barcode allergens are" + barcode_allergens)
     result = ""
     for barllergen in barcode_allergens:
         if barllergen in alternate_allergens:
@@ -172,13 +172,14 @@ def getAllergendata():
         where
          allergen_name in ({})
         """.format(','.join("?" * len(selected_allergens))), selected_allergens)
-
+    selected_allergens.clear()
+    #selected_allergens = []
     #myallergens = cursor.fetchall()
     myallergens = cursor.fetchall()
     print(myallergens)
     for x,y in myallergens:
         allergens.append(y)
-    print(allergens)
+    print("alternative allergens are"+allergens)
     cursor.close()
     return allergens
     #return allergens

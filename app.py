@@ -137,10 +137,17 @@ def barcode_post():
 
     barcode_allergens = [x.split(':')[1] for x in barcode_allergens]
     print(barcode_allergens)
+    result = ""
     for barllergen in barcode_allergens:
         if barllergen in alternate_allergens:
-            return "Avoid having the product"
-    return "go ahead and have the product"
+            result = "Avoid having the product"
+    result = "go ahead and have the product"
+            #return "Avoid having the product"
+    #return "go ahead and have the product"
+    response = jsonify({
+        "result": result
+    })
+    return response
 
     #return jData['product']['ingredients_hierarchy']
 

@@ -163,7 +163,7 @@ def getAllergendata():
             alternative_allergen_name
         where
          allergen_name in ({})
-        """.format(','.join("?" * len(selected_allergens))), selected_allergens)
+        """.format(','.join("?" * len(demo))), demo)
 
     #myallergens = cursor.fetchall()
     myallergens = cursor.fetchall()

@@ -111,34 +111,34 @@ def form():
     print(type(pro['product']['ingredients_hierarchy']))
     return str(pro['product']['ingredients_hierarchy'])
 
-@app.route('/barcode_post', methods=['POST'],endpoint='barcode_post')
+@app.route('/barcode_post', methods=['POST','GET'],endpoint='barcode_post')
 @cross_origin()
 def barcode_post():
-    if (request.method == 'POST'):
-        print(selected_allergens)
-        barcode = request.json
-        print(barcode)
-        barcode_data = barcode['barcode']
-        code_id = barcode_data
-        temp_url = "https://world.openfoodfacts.org/api/v0/product.json"
-        url = '/'.join([temp_url, code_id])
-        myResponse = requests.get(url, verify=True)
-        # print (myResponse.status_code)
+    #if (request.method == 'POST'):
+    print(selected_allergens)
+    barcode = request.json
+    print(barcode)
+    barcode_data = barcode['barcode']
+    code_id = barcode_data
+    temp_url = "https://world.openfoodfacts.org/api/v0/product.json"
+    url = '/'.join([temp_url, code_id])
+    myResponse = requests.get(url, verify=True)
+    # print (myResponse.status_code)
 
-        # For successful API call, response code will be 200 (OK)
-        if (myResponse.ok):
-            # Loading the response data into a dict variable
-            # json.loads takes in only binary or string variables so using content to fetch binary content
-            # Loads (Load String) takes a Json file and converts into python data structure (dict or list, depending on JSON)
-            jData = json.loads(myResponse.content)
+    # For successful API call, response code will be 200 (OK)
+    if (myResponse.ok):
+        # Loading the response data into a dict variable
+        # json.loads takes in only binary or string variables so using content to fetch binary content
+        # Loads (Load String) takes a Json file and converts into python data structure (dict or list, depending on JSON)
+        jData = json.loads(myResponse.content)
 
-            print("The response contains {0} properties".format(len(jData)))
-            print("\n")
-            print(jData)
+        print("The response contains {0} properties".format(len(jData)))
+        print("\n")
+        print(jData)
 
-        else:
-            # If response code is not ok (200), print the resulting http error code with description
-            myResponse.raise_for_status()
+    else:
+        # If response code is not ok (200), print the resulting http error code with description
+        myResponse.raise_for_status()
 
     alternate_allergens = getAllergendata()
     barcode_allergens = jData['product']['ingredients_hierarchy']

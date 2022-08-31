@@ -6,3 +6,4 @@ mysql-connector-python
 flask_cors
 flask_mysqldb
 requests
+bootstrap-flask

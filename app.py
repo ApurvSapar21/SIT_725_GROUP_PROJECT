@@ -2,6 +2,7 @@ import openfoodfacts.products
 from flask import Flask,render_template, request,jsonify
 from flask_mysqldb import MySQL
 from flask_cors import CORS, cross_origin
+from flask_bootstrap import Bootstrap
 #from PIL import Image
 #from pytesseract import pytesseract
 import mysql.connector
@@ -12,6 +13,7 @@ import io
 import pyodbc
 app = Flask(__name__)
 CORS(app)
+Bootstrap(app)
 
 # Obtain connection string information from the portal
 cnxn_str = ("Driver={ODBC Driver 17 for SQL Server};"

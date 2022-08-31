@@ -37,7 +37,7 @@ selected_allergens = []
 def HomePage():
     return "Hello Guys"
 
-@app.route('/hp', methods=['GET'])
+@app.route('/hp')
 def HomePagev2():
     return render_template('home.html')
 

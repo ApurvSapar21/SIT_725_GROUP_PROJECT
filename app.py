@@ -111,10 +111,10 @@ def form():
     print(type(pro['product']['ingredients_hierarchy']))
     return str(pro['product']['ingredients_hierarchy'])
 
-@app.route('/barcode_post', methods=['POST'],endpoint='barcode_post')
+@app.route('/barcode_post', methods=['POST','GET'],endpoint='barcode_post')
 @cross_origin()
 def barcode_post():
-    if request.method == 'POST':
+    if (request.method == 'POST') or (request.method == 'GET'):
         print(selected_allergens)
         barcode = request.json
         print(barcode)

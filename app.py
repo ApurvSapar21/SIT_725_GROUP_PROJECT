@@ -205,4 +205,6 @@ def user_allergies_post():
     print(selected_allergens)
     return "none"
 
+if __name__ == "__main__":
+    app.run(debug=True)
 

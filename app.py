@@ -11,9 +11,9 @@ import json
 import base64
 import io
 import pyodbc
-app = Flask(__name__)
+app = Flask(__name__,template_folder='templates')
 CORS(app)
-Bootstrap(app)
+#Bootstrap(app)
 
 # Obtain connection string information from the portal
 cnxn_str = ("Driver={ODBC Driver 17 for SQL Server};"

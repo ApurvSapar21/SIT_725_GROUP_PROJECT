@@ -33,6 +33,11 @@ mysql = MySQL(app)
 
 selected_allergens = []
 
+@app.route('/', methods=['GET'])
+def HomePage():
+    return "Hello Guys"
+
+
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')
 def getStudentDetails():
     if request.method == 'GET':

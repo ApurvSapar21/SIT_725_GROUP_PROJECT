@@ -44,7 +44,7 @@ def HomePagev():
     button_txt="Click to Start!"
     return render_template('home-v2.html',result = opening_slogan, subsl= sub_slogan,
                            btn_txt = button_txt)
-
+"""
 @app.route('/details',endpoint='details')
 def allergy_details():
     return render_template("allergy_details.html")
@@ -85,7 +85,7 @@ def get_treenut():
 @app.route('/peanut',endpoint='peanut')
 def get_peanut():
     return render_template("peanut.html")
-
+"""
 
 
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')

@@ -51,7 +51,7 @@ def allergy_details():
 
 @app.route('/options')
 def options():
-    return render_template("allergy_details.html")
+    return render_template("options.html")
 
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')
 def getStudentDetails():

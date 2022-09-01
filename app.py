@@ -49,44 +49,45 @@ def HomePagev():
 def allergy_details():
     return render_template("allergy_details.html")
 
+"""
 @app.route('/options',endpoint='options')
 def options():
     return render_template("options.html")
-
+"""
 @app.route('/Food_sub',endpoint='Food_sub')
-def food_sub():
+def get_food_sub():
     return render_template("Food_sub.html")
 
 @app.route('/wheat',endpoint='wheat')
-def wheat():
+def get_wheat():
     return render_template("wheat.html")
 
 @app.route('/dairy',endpoint='dairy')
-def dairy():
+def get_dairy():
     return render_template("dairy.html")
 
 @app.route('/egg',endpoint='egg')
-def egg():
+def get_egg():
     return render_template("egg.html")
 
 @app.route('/shellfish',endpoint='shellfish')
-def shellfish():
+def get_shellfish():
     return render_template("shellfish.html")
 
 @app.route('/soy',endpoint='soy')
-def soy():
+def get_soy():
     return render_template("soy.html")
 
 @app.route('/sesame',endpoint='sesame')
-def sesame():
+def get_sesame():
     return render_template("sesame.html")
 
 @app.route('/treenut',endpoint='treenut')
-def treenut():
+def get_treenut():
     return render_template("treenut.html")
 
 @app.route('/peanut',endpoint='peanut')
-def peanut():
+def get_peanut():
     return render_template("peanut.html")
 
 

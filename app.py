@@ -45,47 +45,47 @@ def HomePagev():
     return render_template('home-v2.html',result = opening_slogan, subsl= sub_slogan,
                            btn_txt = button_txt)
 
-@app.route('/details')
+@app.route('/details',endpoint='details')
 def allergy_details():
     return render_template("allergy_details.html")
 
-@app.route('/options')
+@app.route('/options',endpoint='options')
 def options():
     return render_template("options.html")
 
-@app.route('/Food_sub')
+@app.route('/Food_sub',endpoint='Food_sub')
 def options():
     return render_template("Food_sub.html")
 
-@app.route('/wheat')
+@app.route('/wheat',endpoint='wheat')
 def options():
     return render_template("wheat.html")
 
-@app.route('/dairy')
+@app.route('/dairy',endpoint='dairy')
 def options():
     return render_template("dairy.html")
 
-@app.route('/egg')
+@app.route('/egg',endpoint='egg')
 def options():
     return render_template("egg.html")
 
-@app.route('/shellfish')
+@app.route('/shellfish',endpoint='shellfish')
 def options():
     return render_template("shellfish.html")
 
-@app.route('/soy')
+@app.route('/soy',endpoint='soy')
 def options():
     return render_template("soy.html")
 
-@app.route('/sesame')
+@app.route('/sesame',endpoint='sesame')
 def options():
     return render_template("sesame.html")
 
-@app.route('/treenut')
+@app.route('/treenut',endpoint='treenut')
 def options():
     return render_template("treenut.html")
 
-@app.route('/peanut')
+@app.route('/peanut',endpoint='peanut')
 def options():
     return render_template("peanut.html")
 
@@ -242,7 +242,7 @@ def getAllergendata():
     return allergens
     #return allergens
 
-@app.route('/user_allergies', methods=['POST'])
+@app.route('/user_allergies', methods=['POST'],endpoint='user_allergies')
 @cross_origin()
 def user_allergies_post():
     if request.method == 'POST':

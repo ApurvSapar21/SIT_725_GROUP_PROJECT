@@ -49,11 +49,7 @@ def HomePagev():
 def allergy_details():
     return render_template("allergy_details.html")
 
-"""
-@app.route('/options',endpoint='options')
-def options():
-    return render_template("options.html")
-"""
+
 @app.route('/Food_sub',endpoint='Food_sub')
 def get_food_sub():
     return render_template("Food_sub.html")
@@ -164,7 +160,7 @@ def form():
 
 @app.route('/barcode_post', methods=['POST','GET'],endpoint='barcode_post')
 @cross_origin()
-def barcode_post():
+def get_barcode_post():
     #if (request.method == 'POST'):
     print(selected_allergens)
     barcode = request.json

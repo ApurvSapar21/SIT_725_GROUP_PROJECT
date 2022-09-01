@@ -49,10 +49,11 @@ def HomePagev():
 def allergy_details():
     return render_template("allergy_details.html")
 
+"""
 @app.route('/options',endpoint='options')
 def options():
     return render_template("options.html")
-
+"""
 @app.route('/Food_sub',endpoint='Food_sub')
 def food_sub():
     return render_template("Food_sub.html")

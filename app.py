@@ -49,6 +49,10 @@ def HomePagev():
 def allergy_details():
     return render_template("allergy_details.html")
 
+@app.route('/options')
+def options():
+    return render_template("allergy_details.html")
+
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')
 def getStudentDetails():
     if request.method == 'GET':

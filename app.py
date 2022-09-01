@@ -54,39 +54,39 @@ def options():
     return render_template("options.html")
 
 @app.route('/Food_sub',endpoint='Food_sub')
-def options():
+def food_sub():
     return render_template("Food_sub.html")
 
 @app.route('/wheat',endpoint='wheat')
-def options():
+def wheat():
     return render_template("wheat.html")
 
 @app.route('/dairy',endpoint='dairy')
-def options():
+def dairy():
     return render_template("dairy.html")
 
 @app.route('/egg',endpoint='egg')
-def options():
+def egg():
     return render_template("egg.html")
 
 @app.route('/shellfish',endpoint='shellfish')
-def options():
+def shellfish():
     return render_template("shellfish.html")
 
 @app.route('/soy',endpoint='soy')
-def options():
+def soy():
     return render_template("soy.html")
 
 @app.route('/sesame',endpoint='sesame')
-def options():
+def sesame():
     return render_template("sesame.html")
 
 @app.route('/treenut',endpoint='treenut')
-def options():
+def treenut():
     return render_template("treenut.html")
 
 @app.route('/peanut',endpoint='peanut')
-def options():
+def peanut():
     return render_template("peanut.html")
 
 
@@ -242,7 +242,7 @@ def getAllergendata():
     return allergens
     #return allergens
 
-@app.route('/user_allergies', methods=['POST'],endpoint='user_allergies')
+@app.route('/user_allergies', methods=['POST'])
 @cross_origin()
 def user_allergies_post():
     if request.method == 'POST':

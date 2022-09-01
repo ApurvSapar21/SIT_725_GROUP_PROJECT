@@ -53,6 +53,44 @@ def allergy_details():
 def options():
     return render_template("options.html")
 
+@app.route('/Food_sub')
+def options():
+    return render_template("Food_sub.html")
+
+@app.route('/wheat')
+def options():
+    return render_template("wheat.html")
+
+@app.route('/dairy')
+def options():
+    return render_template("dairy.html")
+
+@app.route('/egg')
+def options():
+    return render_template("egg.html")
+
+@app.route('/shellfish')
+def options():
+    return render_template("shellfish.html")
+
+@app.route('/soy')
+def options():
+    return render_template("soy.html")
+
+@app.route('/sesame')
+def options():
+    return render_template("sesame.html")
+
+@app.route('/treenut')
+def options():
+    return render_template("treenut.html")
+
+@app.route('/peanut')
+def options():
+    return render_template("peanut.html")
+
+
+
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')
 def getStudentDetails():
     if request.method == 'GET':

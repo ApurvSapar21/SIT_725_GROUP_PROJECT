@@ -45,6 +45,9 @@ def HomePagev():
     return render_template('home-v2.html',result = opening_slogan, subsl= sub_slogan,
                            btn_txt = button_txt)
 
+@app.route('/details')
+def HomePagev():
+    return render_template("allergy_details.html")
 
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')
 def getStudentDetails():

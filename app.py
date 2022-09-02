@@ -15,6 +15,9 @@ app = Flask(__name__,template_folder='templates',static_folder='static')
 CORS(app)
 Bootstrap(app)
 
+# Yan bai has come
+
+
 # Obtain connection string information from the portal
 cnxn_str = ("Driver={ODBC Driver 17 for SQL Server};"
             "Server=tcp:foodallergyserver.database.windows.net,1433;"

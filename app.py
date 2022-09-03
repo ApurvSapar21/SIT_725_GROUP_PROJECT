@@ -42,8 +42,7 @@ selected_allergens = []
 def HomePagev():
     opening_slogan = 'As a Parent of Children with Food Allergies,\nShopping Has Never been Easier!'
     sub_slogan = "Find out if the Food product you want to buy or use is suitable for your children by scanning"\
-            " the product's barcode. Also, see different possible food substitutions that is safe from your"\
-            "child's allergy reaction."
+            " the product's barcode. Also, see different possible food substitutions that is safe from your child's allergy reaction."
     button_txt="Click to Start!"
     return render_template('home-v2.html',result = opening_slogan, subsl= sub_slogan,
                            btn_txt = button_txt)

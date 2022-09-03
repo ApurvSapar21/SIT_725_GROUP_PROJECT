@@ -52,6 +52,10 @@ def HomePagev():
 def get_options():
     return render_template("options.html")
 
+@app.route('/aboutus',endpoint='options')
+def get_options():
+    return render_template("about_us.html")
+
 @app.route('/details',endpoint='details')
 def get_allergy_details():
     return render_template("allergy_details.html")

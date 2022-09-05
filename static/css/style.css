@@ -2407,8 +2407,8 @@ table img{
      position: absolute;
      top: 0;
      left: 0;
-     width: 100%;
-     height: 100%;
+     width: 100px;
+     height: 100px;
      background-color: rgba(0,0,0,.6);
      border-top-left-radius: 8px;
      border-top-right-radius: 8px;

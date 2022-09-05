@@ -4391,3 +4391,9 @@ td.quantity{
          width: 125px;
     }
 }
+.img_crop{
+width: 100px;
+height: 100px;
+object-fit: cover;
+object-position: 100% 0;
+}

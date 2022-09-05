@@ -199,9 +199,13 @@ def get_barcode_post():
     else:
         # If response code is not ok (200), print the resulting http error code with description
         myResponse.raise_for_status()
+        print(myResponse.raise_for_status())
 
     alternate_allergens = getAllergendata()
-    barcode_allergens = jData['product']['ingredients_hierarchy']
+    try:
+        barcode_allergens = jData['product']['ingredients_hierarchy']
+    except Exception as e:
+        return jsonify({"result":"product not found in Database"})
 
     barcode_allergens = [x.split(':')[1] for x in barcode_allergens]
     print(barcode_allergens)

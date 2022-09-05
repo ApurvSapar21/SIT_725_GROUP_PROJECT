@@ -4393,7 +4393,7 @@ td.quantity{
 }
 .img_crop{
 width: 150px;
-height: 300px;
+height: 250px;
 object-fit: cover;
 object-position: 100% 0;
 }

@@ -4408,6 +4408,5 @@ html{
   scroll-behavior: smooth;
  }
  #scrollpoint {
-  margin-top: 100%;
-  padding-bottom: 25%;
+  margin-top: 10px;
  }

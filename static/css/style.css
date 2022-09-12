@@ -4404,3 +4404,10 @@ object-position: 100% 0;
     text-align: center;
     padding: 14px 10px 10px 10px;
 }
+html{
+  scroll-behavior: smooth;
+ }
+ #scrollpoint {
+  margin-top: 100%;
+  padding-bottom: 25%;
+ }

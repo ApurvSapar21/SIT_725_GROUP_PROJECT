@@ -41,24 +41,9 @@ product_barcode = []
 @app.route('/')
 def HomePagev():
     opening_slogan = 'As a Parent of Children with Food Allergies,\nShopping Has Never been Easier!'
-    button_txt="Click to see Features"
+    button_txt="Click to start scanning"
     return render_template('home-v2.html',result = opening_slogan,
                            btn_txt = button_txt)
-
-
-@app.route('/options',endpoint='options')
-def get_options():
-    return render_template("options.html")
-
-
-@app.route('/aboutus',endpoint='aboutus')
-def get_aboutus():
-    return render_template("about_us.html")
-
-
-@app.route('/details',endpoint='details')
-def get_allergy_details():
-    return render_template("allergy_details.html")
 
 
 @app.route('/Food_sub',endpoint='Food_sub')

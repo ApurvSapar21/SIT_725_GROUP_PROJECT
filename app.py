@@ -223,6 +223,15 @@ def get_barcode_post():
 
     #return jData['product']['ingredients_hierarchy']
 
+@app.route('/clearallergens', methods=['POST','GET'],endpoint='clearallergens')
+@cross_origin()
+def clearAllergens():
+    selected_allergens.clear()
+    if not selected_allergens:
+        return jsonify({"result": "cleared"})
+    return jsonify({"result": "selected allergens are not empty yet"})
+
+
 def getAllergendata():
     allergens = []
     demo = ["dairy","wheat"]
@@ -243,7 +252,7 @@ def getAllergendata():
         where
          allergen_name in ({})
         """.format(','.join("?" * len(selected_allergens))), selected_allergens)
-    selected_allergens.clear()
+    #selected_allergens.clear()
     #selected_allergens = []
     #myallergens = cursor.fetchall()
     myallergens = cursor.fetchall()

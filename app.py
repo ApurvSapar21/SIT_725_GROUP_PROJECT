@@ -207,7 +207,12 @@ def get_barcode_post():
     result = ""
     for barllergen in barcode_allergens:
         if barllergen in alternate_allergens:
-            return jsonify({"result":"Avoid having the product"})
+            return jsonify(
+                {"result":"Avoid having the product",
+                 "teaspoons": teaspoons,
+                 "compare_to_intake": compare_to_intake,
+                 "sugar": sugar
+                 })
             #result = "Avoid having the product"
     result = "go ahead and have the product"
             #return "Avoid having the product"

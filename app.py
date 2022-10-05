@@ -50,6 +50,10 @@ def HomePagev():
 def get_food_sub():
     return render_template("Food_sub.html")
 
+@app.route('/childeducation',endpoint='childeducation')
+def get_food_sub():
+    return render_template("childeducation.html")
+
 @app.route('/wheat',endpoint='wheat')
 def get_wheat():
     return render_template("wheat.html")

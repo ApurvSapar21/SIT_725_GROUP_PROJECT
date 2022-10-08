@@ -4415,7 +4415,7 @@ html{
   position: relative;
 }
 
-.tooltip .tooltiptext {
+.ct-category .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: black;
@@ -4434,7 +4434,7 @@ html{
   transition: opacity 1s;
 }
 
-.tooltip .tooltiptext::after {
+.ct-category .tooltiptext::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -4444,7 +4444,7 @@ html{
   border-style: solid;
   border-color: black transparent transparent transparent;
 }
-.tooltip:hover .tooltiptext {
+.ct-category:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }

@@ -4432,3 +4432,10 @@ html{
   visibility: visible;
   opacity: 1;
 }
+
+.img_crop_home{
+width: 150px;
+height: 50px;
+object-fit: cover;
+object-position: 100% 0;
+}

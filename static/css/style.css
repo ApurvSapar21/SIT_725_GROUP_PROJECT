@@ -2326,20 +2326,7 @@ table img{
 .ct-category:hover h5{
      color: #fff;
 }
-.ct-category span{
-     border-radius: 8px;
-     padding: 2px 8px;
-     font-weight: 600;
-     color: #85B72C;
-     background-color: #dde6ce;
-     font-size: 12px;
-     -webkit-transition: .3s;
-     -o-transition: .3s;
-     transition: .3s;
-}
-.ct-category:hover span{
-     background-color: #fff;
-}
+
 /* Style 2 */
 .ct-categories-2 .ct-category{
      position: relative;
@@ -4411,9 +4398,6 @@ html{
   margin-top: 25px;
  }
 
- .tooltip {
-  position: relative;
-}
 
 .ct-category .tooltiptext {
   visibility: hidden;

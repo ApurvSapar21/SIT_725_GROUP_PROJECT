@@ -88,7 +88,7 @@ def get_peanut():
 
 @app.route('/static_information',endpoint='static_information')
 def get_static_information():
-    return render_template("static_information.html")
+    return render_template("static_infomation.html")
 
 
 

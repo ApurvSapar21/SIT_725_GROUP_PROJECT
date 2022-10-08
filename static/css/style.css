@@ -1898,10 +1898,10 @@ table img{
 }
 .banner{
      position: relative;
-     padding: 120px 0;
+     padding: 50px 0;
      background-size: cover;
      background-position: center;
-     min-height: 800px;
+     min-height: 500px;
 }
 .banner >.container{
      position: absolute;

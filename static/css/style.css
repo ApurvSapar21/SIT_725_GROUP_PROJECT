@@ -4434,8 +4434,8 @@ html{
 }
 
 .img_crop_home{
-width: 150px;
-height: 50px;
+width: 1500px;
+height: 500px;
 object-fit: cover;
 object-position: 100% 0;
 }

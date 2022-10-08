@@ -86,6 +86,10 @@ def get_treenut():
 def get_peanut():
     return render_template("peanut.html")
 
+@app.route('/static_information',endpoint='static_information')
+def get_static_information():
+    return render_template("static_information.html")
+
 
 
 @app.route('/getstudentdetails', methods=['GET'],endpoint='getStudentDetails')

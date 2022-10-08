@@ -15,6 +15,31 @@
       <link rel="stylesheet" href="static/css/all.min.css">
       <!-- Cookiteer Style sheet -->
       <link rel="stylesheet" href="static/css/style.css">
+       <style>
+            .accordion {
+               background-color: #eee;
+                 color: #444;
+                 cursor: pointer;
+                  padding: 18px;
+                  width: 100%;
+                  border: none;
+                  text-align: left;
+                  outline: none;
+                  font-size: 15px;
+                  transition: 0.4s;
+            }
+
+            .active, .accordion:hover {
+              background-color: #ccc;
+            }
+
+            .panel {
+              padding: 0 18px;
+              display: none;
+              background-color: white;
+              overflow: hidden;
+            }
+</style>
       <!-- Favicon -->
    </head>
    <body>
@@ -144,58 +169,68 @@
     <h2>What is a Food Allergy?</h2>
     <p>Food Allergies is an abnormal response to specific kinds of foods caused by the <strong>immune system</strong>.</p>
     <h3>Most Common Food Allergens</h3>
+
     <p>In Children, the most common food allergens are <strong>peanuts,
         cow’s milk (dairy), wheat, pinenut, soy and eggs.</strong> However, not limited to just these, where the Australian FDA also includes,
         <strong>allergens such as shellfish, sesame and lupin.</strong></p>
+
     <h3>Food Allergies are different from food intolerances. </h3>
     <p>You might have heard of Food intolerances, such as Lactose intolerance,
         which means intolerant towards milk. The difference is that with food intolerance
         is how it occurs: this is where the body has a chemical reaction
         towards a specific food, compared to an immune response in food allergies.</p>
-      </div>
 
-     <h2>Symptoms of Food Allergy</h2>
-      <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id ="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
+    <h2>Symptoms of Food Allergy</h2>
+
+    <button class="accordion">Mild Allergy Symptoms</button>
+        <div class="panel">
+          <p>- Hives</p>
+          <p>- Swelling of face and mouth</p>
+          <p>- Vomiting</p>
+          <p>- Abdominal discomfort or pain</p>
+        </div>
+
+    <button class="accordion">Severe Allergy Symptoms</button>
+        <div class="panel">
+          <p>- Wheeze or Trouble Breathing</p>
+          <p>- Cough</p>
+          <p>- Swelling of Tongue</p>
+          <p>- Diarrhoea</p>
+        </div>
+
+          <h2>Severe food allergy in children</h2>
+          <p>For some children, they may experience respiratory difficulties, such as anaphylaxis.
+              Most schools and childcare services across Australia are required to have an anaphylaxis
+              management policy in place. However, it can be hard to control or manage food that your child
+              may come across in school. Therefore, education of staff, students and parents are vital. </p>
+
+    <h2>Treatment</h2>
+          <p>The most efficient way is to <strong>avoid the foods</strong> that are causing the allergy reactions from the diet completely. </p>
+          <p>There are <strong>2 main types of medication </strong> that can be used to relieve the symptoms of an allergic reaction to foods: </p>
+
+            <button class="accordion">Antihistamines</button>
+            <div class="panel">
+              <p>Used to treat mild to moderate allergic reactions.</p>
+              <p><strong><i>Warning: Some antihistamines can cause drowsiness. Please seek your general practitioner's advice, and avoid prescribing for children under the age of 2 years old.</i></strong></p>
+
+            </div>
+
+            <button class="accordion">Adrenaline</button>
+            <div class="panel">
+              <p>Used to treat severe allergic reactions (Anaphylaxis)</p>
+            </div>
+
+            <h2> Who should I speak to about managing my Children’s allergies?</h2>
+            <p>The first place to seek advice would be from your <strong>general practitioner (GP Doctor), and registered Health Professionals.</strong></p>
+
+            <h2>Allergy Support Groups</h2>
+            <p>As parents, it can be difficult to manage . However, you are not alone, there are other parents that can be going through the same thing as you. There are support groups that can help you:</p>
+            <a href="https://allergysupporthub.com.au/family-workshops/">1. Visit AllergySupportHub </a>
+            <p></p>
+            <a href="https://allergylife.com.au/pages/online-peer-allergy-support">2. AllergyLife </a>
 
 
-
+      </div>
 
       <!-- Footer Start -->
        <footer>
@@ -206,6 +241,38 @@
          </div>
       </footer>
 
-      <!-- Footer End --><!-- Vendor Scripts --><script src="static/js/jquery-3.4.1.min.js"></script><script src="static/js/popper.min.js"></script><script src="static/js/waypoint.js"></script><script src="static/js/bootstrap.min.js"></script><script src="static/js/jquery.magnific-popup.min.js"></script><script src="static/js/jquery.slimScroll.min.js"></script><script src="static/js/imagesloaded.min.js"></script><script src="static/js/jquery.steps.min.js"></script><script src="static/js/jquery.countdown.min.js"></script><script src="static/js/isotope.pkgd.min.js"></script><script src="static/js/slick.min.js"></script><!-- Cookiteer Scripts --><script src="static/js/main.js"></script>
+      <!-- Footer End --><!-- Vendor Scripts -->
+      <script src="static/js/jquery-3.4.1.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/waypoint.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+      <script src="static/js/jquery.magnific-popup.min.js"></script>
+      <script src="static/js/jquery.slimScroll.min.js"></script>
+      <script src="static/js/imagesloaded.min.js"></script>
+      <script src="static/js/jquery.steps.min.js"></script>
+      <script src="static/js/jquery.countdown.min.js"></script>
+      <script src="static/js/isotope.pkgd.min.js"></script>
+      <script src="static/js/slick.min.js"></script>
+
+      <!-- Cookiteer Scripts -->
+      <script src="static/js/main.js"></script>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+         acc[i].addEventListener("click", function() {
+         this.classList.toggle("active");
+         var panel = this.nextElementSibling;
+         if (panel.style.display === "block") {
+              panel.style.display = "none";
+         } else {
+           panel.style.display = "block";
+         }
+        });
+        }
+       </script>
+
    </body>
 </html>

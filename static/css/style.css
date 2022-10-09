@@ -4439,3 +4439,11 @@ height: 150px;
 object-fit: cover;
 object-position: 100% 0;
 }
+
+.banner_alsub{
+     position: relative;
+     padding: 50px 0;
+     background-size: cover;
+     background-position: center;
+     min-height: 150px;
+}

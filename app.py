@@ -46,6 +46,13 @@ def HomePagev():
                            btn_txt = button_txt)
 
 
+# app name
+@app.errorhandler(404)
+# inbuilt function which takes error as parameter
+def not_found(e):
+    # defining function
+    return render_template("404.html")
+
 @app.route('/Food_sub',endpoint='Food_sub')
 def get_food_sub():
     return render_template("Food_sub.html")

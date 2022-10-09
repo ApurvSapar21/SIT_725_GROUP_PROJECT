@@ -4442,8 +4442,8 @@ object-position: 100% 0;
 
 .banner_alsub{
      position: relative;
-     padding: 50px 0;
+     padding: 35px 0;
      background-size: cover;
      background-position: center;
-     min-height: 150px;
+     min-height: 100px;
 }

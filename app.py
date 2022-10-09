@@ -40,8 +40,8 @@ product_barcode = []
 
 @app.route('/')
 def HomePagev():
-    opening_slogan = 'As a Parent of Children with Food Allergies,\nShopping Has Never been Easier!'
-    button_txt="Click to start scanning"
+    opening_slogan = 'Shopping Has Never been Easier for \nParents of Children with Food Allergies'
+    button_txt="Click to start scanning for Allergens"
     return render_template('home-v2.html',result = opening_slogan,
                            btn_txt = button_txt)
 

@@ -178,6 +178,7 @@ def get_barcode_post():
     barcode = request.json
     print(barcode)
     barcode_data = barcode['barcode']
+    product_barcode.clear()
     code_id = barcode_data
     product_barcode.append(code_id)
     print(product_barcode)
@@ -336,7 +337,7 @@ def salt_comparison():
             "age_range": age_range
         })
         #return str(times) + ' % of the recommended daily intake of salt for a child within the age '+ age_range
-        product_barcode.clear()
+        #product_barcode.clear()
         return response
 
 def get_sugar():

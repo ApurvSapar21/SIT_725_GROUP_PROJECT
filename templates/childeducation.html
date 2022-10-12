@@ -37,36 +37,91 @@
        </style>
    </head>
    <body>
-      <!-- Preloader start -->
-      <div class="ct-preloader">
-         <div class="ct-preloader-inner">
-            <div class="ct-preloader-pan">
-               <div class="ct-preloader-pan-inner">
-                  <div class="ct-preloader-pan-circle"></div>
-                  <div class="ct-preloader-pan-handle"></div>
+          <!-- Preloader start -->
+          <div class="ct-preloader hidden">
+             <div class="ct-preloader-inner">
+                <div class="ct-preloader-pan">
+                   <div class="ct-preloader-pan-inner">
+                      <div class="ct-preloader-pan-circle"></div>
+                      <div class="ct-preloader-pan-handle"></div>
+                   </div>
+                   <div class="ct-preloader-pancake">
+                      <div class="ct-preloader-pancake-inner"></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <!-- Preloader End --><!-- Aside (Mobile Navigation) -->
+          <aside class="main-aside open">
+               <a class="navbar-brand" href="/"><img src="static/picture/food_guards_logo.png" alt="logo"></a>
+               <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 616.437px;">
+                  <div class="aside-scroll" style="overflow: hidden; width: auto; height: 616.437px;">
+                     <ul>
+                        <li class="menu-item">
+                            <a href="/">Home Page</a>
+                        </li><li class="menu-item">
+                            <a href="https://foodallergynew.azurewebsites.net">Barcode Scanner</a>
+                        </li>
+                         <li class="menu-item">
+                            <a href="/childeducation">Child Education</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a>Allergen Substitutes</a>
+                            <ul class="submenu">
+                                <li class="menu-item">
+                                    <a href="/wheat">Wheat</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/dairy">Dairy</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/peanut">Peanut</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/sesame">Sesame</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/egg">Egg</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/soy">Soy</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/shellfish">Shellfish</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/treenut">Treenut</a>
+                                </li>
+                            </ul>
+                        </li>
+                         <li class="menu-item">
+                             <a href="/static_information">More Information</a>
+                         </li>
+                    </ul>
+                  </div>
+                  <div class="slimScrollBar" style="background: rgb(220, 220, 220); width: 5px; position: absolute; top: -0.425px; opacity: 1; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 616.85px;"></div>
+                  <div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
                </div>
-               <div class="ct-preloader-pancake">
-                  <div class="ct-preloader-pancake-inner"></div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- Preloader End --><!-- Aside (Mobile Navigation) -->
-      <aside class="main-aside open">
-           <a class="navbar-brand" href="/"><img src="static/picture/food_guards_logo.png" alt="logo"></a>
-           <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 681.475px;">
-              <div class="aside-scroll" style="overflow: hidden; width: auto; height: 681.475px;">
-                 <ul>
+            </aside>
+
+
+        <div class="aside-overlay aside-trigger"></div>
+           <!-- Header Start -->
+        <header class="main-header header-1 can-sticky sticky">
+           <nav class="navbar">
+              <div class="container">
+                 <!-- Logo --><a class="navbar-brand" href="/"><img src="static/picture/food_guards_logo.png" alt="logo"></a><!-- Menu -->
+                 <ul class="navbar-nav">
                     <li class="menu-item">
                         <a href="/">Home Page</a>
-                    <li class="menu-item">
+                    </li><li class="menu-item">
                         <a href="https://foodallergynew.azurewebsites.net">Barcode Scanner</a>
                     </li>
                      <li class="menu-item">
-                        <a href="/childeducation">Child Education</a>
-                    </li>
+                            <a href="/childeducation">Child Education</a>
+                        </li>
                     <li class="menu-item menu-item-has-children">
-                        <a>Allergen Substitutes</a>
+                        <a href="/Food_sub">Allergen Substitutes</a>
                         <ul class="submenu">
                             <li class="menu-item">
                                 <a href="/wheat">Wheat</a>
@@ -95,193 +150,138 @@
                         </ul>
                     </li>
                      <li class="menu-item">
-                         <a href="/static_information">More Information</a>
-                     </li>
-                </ul>
+                             <a href="/static_information">More Information</a>
+                 </li></ul>
+                 <!-- Toggler -->
+                 <div class="aside-toggler aside-trigger"><span></span><span></span><span></span></div>
               </div>
-              <div class="slimScrollBar" style="background: rgb(220, 220, 220); width: 5px; position: absolute; top: -0.475px; opacity: 1; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 681.95px;"></div>
-              <div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
-           </div>
-        </aside>
+           </nav>
+        </header>
+        <!-- Header End --><!-- Banner Start -->
+          <div class="banner_alsub dark-overlay" style="background-image: url('static/picture/for_child_edu.jpg')">
+             <!-- Prev Arrow -->
+             <div class="container">
+                <div class="section section-padding-inf ct-categories ct-categories-2">
+                   <div class="container">
+                      <h1 class="title text-white"> Child Education </h1>
+                       <p class="subtitle text-white"> Use the below moving pictures and cartoon storyline to educate your children on food allergies. </p>
+                      <div class="row">
+                         </div>
 
+                      </div>
+                   </div>
+                </div>
+             </div>
 
-    <div class="aside-overlay aside-trigger"></div>
-       <!-- Header Start -->
-    <header class="main-header header-1 can-sticky">
-       <nav class="navbar">
-          <div class="container">
-             <!-- Logo --><a class="navbar-brand" href="/"><img src="static/picture/food_guards_logo.png" alt="logo"></a><!-- Menu -->
-             <ul class="navbar-nav">
-                <li class="menu-item">
-                    <a href="/">Home Page</a>
-                <li class="menu-item">
-                    <a href="https://foodallergynew.azurewebsites.net">Barcode Scanner</a>
-                </li>
-                 <li class="menu-item">
-                        <a href="/childeducation">Child Education</a>
-                    </li>
-                <li class="menu-item menu-item-has-children">
-                    <a href="/Food_sub">Allergen Substitutes</a>
-                    <ul class="submenu">
-                        <li class="menu-item">
-                            <a href="/wheat">Wheat</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/dairy">Dairy</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/peanut">Peanut</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/sesame">Sesame</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/egg">Egg</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/soy">Soy</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/shellfish">Shellfish</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/treenut">Treenut</a>
-                        </li>
-                    </ul>
-                </li>
-                 <li class="menu-item">
-                         <a href="/static_information">More Information</a>
-             </ul>
-             <!-- Toggler -->
-             <div class="aside-toggler aside-trigger"><span></span><span></span><span></span></div>
-          </div>
-       </nav>
-    </header>
-    <!-- Header End --><!-- Banner Start -->
-      <div class="banner_alsub dark-overlay" style="background-image: url('static/picture/for_child_edu.jpg')">
-         <!-- Prev Arrow -->
-         <div class="container">
-            <div class="section section-padding-inf ct-categories ct-categories-2">
+             <!-- Prev Arrow -->
+
+            <div class="section section-padding ct-categories ct-categories-2">
                <div class="container">
-                  <h1 class="title text-white"> Child Education </h1>
-                   <p class="subtitle text-white"> Use the below moving pictures and cartoon storyline to educate your children on food allergies. </p>
-                  <div class="row">
-                     </div>
+                   <h1>Moving pictures</h1>
+                   <div class="row">
+                       <div class="col-sm-6">
+                           <p> Use the up, down, left and right arrow keys on your keyboard to control the car to find foods that can cause allergies. </p>
+                           <iframe src="https://my.spline.design/carcampingphysicscopy-88a3c34932873e909513a23611acf3fb/" frameborder="0" width="200%" height="200%">
+                           </iframe>
+                       </div>
+    </div>
+    <div class="row" style="padding-top: 350px">
+        <div class="col-sm-6">
+                           <p>Click and drag on the moving image to learn how to possibly use our website. </p>
+                           <iframe src="https://my.spline.design/devicecloudcopy-49ee9c30d75d865cd6e51c587c63c18f/" frameborder="0" width="200%" height="200%"></iframe>
+
+        </div>
+    </div>
+                   <div style="padding-top: 350px">
+                   <h1>Cartoon storyline slides</h1>
+                   <p>Follow John and Mary in their journey in discovering what food allergies are, with the cartoon below. </p>
+                   </div>
+               <div class="row" style="padding-top: 2px">
+                       <div id="demo" class="carousel slide" data-ride="carousel" style="float:none; margin:auto;">
+                              <!-- Indicators -->
+                              <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class=""></li>
+                                <li data-target="#demo" data-slide-to="1" class=""></li>
+                                <li data-target="#demo" data-slide-to="2" class=""></li>
+                                <li data-target="#demo" data-slide-to="3" class=""></li>
+                                <li data-target="#demo" data-slide-to="4" class="active"></li>
+                                <li data-target="#demo" data-slide-to="5" class=""></li>
+                                <li data-target="#demo" data-slide-to="6" class=""></li>
+                                <li data-target="#demo" data-slide-to="7" class=""></li>
+                                <li data-target="#demo" data-slide-to="8" class=""></li>
+                                <li data-target="#demo" data-slide-to="9" class=""></li>
+                                <li data-target="#demo" data-slide-to="10" class=""></li>
+                                <li data-target="#demo" data-slide-to="11" class=""></li>
+                              </ul>
+                              <!-- The slideshow -->
+                              <div class="carousel-inner">
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/1.png" alt="1.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/2.png" alt="2.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/3.png" alt="3.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/4.png" alt="4.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item active" data-interval="9000">
+                                  <img src="static/picture/5.png" alt="5.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/6.png" alt="6.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/7.png" alt="7.png" width="500" height="300">
+                                </div>
+                                  <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/8.png" alt="8.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/9.png" alt="9.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/10.jpeg" alt="10.jpeg" width="500" height="300">
+                                </div>
+                                  <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/11.png" alt="11.png" width="500" height="300">
+                                </div>
+                                <div class="carousel-item" data-interval="9000">
+                                  <img src="static/picture/12.png" alt="12.png" width="500" height="300">
+                                </div>
+                              </div>
+                              <!-- Left and right controls -->
+                              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                              </a>
+                              <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                              </a>
+                            </div>
+                   </div>
+
+               </div>
 
                   </div>
-               </div>
-            </div>
-         </div>
-
-         <!-- Prev Arrow -->
-
-        <div class="section section-padding ct-categories ct-categories-2">
-           <div class="container">
-               <h1>Moving pictures</h1>
-               <div class="row">
-                   <div class="col-sm-6">
-                       <p> Use the up, down, left and right arrow keys on your keyboard to control the car to find foods that can cause allergies. </p>
-                       <iframe src='https://my.spline.design/carcampingphysicscopy-88a3c34932873e909513a23611acf3fb/'
-                               frameborder='0' width='100%' height='100%'>
-                       </iframe>
-                   </div>
-                   <div class="col-sm-6">
-                       <p>Click and drag on the moving image to learn how to possibly use our website. </p>
-                       <iframe
-                        src='https://my.spline.design/devicecloudcopy-49ee9c30d75d865cd6e51c587c63c18f/'
-                        frameborder='0' width='100%' height='300%'></iframe>
-
-                   </div>
-               </div>
-               <div style="padding-top: 330px">
-               <h1>Cartoon storyline slides</h1>
-               <p>Follow John and Mary in their journey in discovering what food allergies are, with the cartoon below. </p>
-               </div>
-           <div class="row" style="padding-top: 2px">
-                   <div id="demo" class="carousel slide" data-ride="carousel" style="float:none; margin:auto;">
-                          <!-- Indicators -->
-                          <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#demo" data-slide-to="1"></li>
-                            <li data-target="#demo" data-slide-to="2"></li>
-                            <li data-target="#demo" data-slide-to="3"></li>
-                            <li data-target="#demo" data-slide-to="4"></li>
-                            <li data-target="#demo" data-slide-to="5"></li>
-                            <li data-target="#demo" data-slide-to="6"></li>
-                            <li data-target="#demo" data-slide-to="7"></li>
-                            <li data-target="#demo" data-slide-to="8"></li>
-                            <li data-target="#demo" data-slide-to="9"></li>
-                            <li data-target="#demo" data-slide-to="10"></li>
-                            <li data-target="#demo" data-slide-to="11"></li>
-                          </ul>
-                          <!-- The slideshow -->
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-interval="9000">
-                              <img src="static/picture/1.png" alt="1.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/2.png" alt="2.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/3.png" alt="3.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/4.png" alt="4.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/5.png" alt="5.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/6.png" alt="6.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/7.png" alt="7.png" width="500" height="300">
-                            </div>
-                              <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/8.png" alt="8.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/9.png" alt="9.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/10.jpeg" alt="10.jpeg" width="500" height="300">
-                            </div>
-                              <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/11.png" alt="11.png" width="500" height="300">
-                            </div>
-                            <div class="carousel-item" data-interval="9000">
-                              <img src="static/picture/12.png" alt="12.png" width="500" height="300">
-                            </div>
-                          </div>
-                          <!-- Left and right controls -->
-                          <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                          </a>
-                          <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                          </a>
-                        </div>
-               </div>
-
-           </div>
-
-              </div>
 
 
-         </div>
-      </div>
 
 
-      <!-- Instagram End --><!-- Categories Section Start -->
-       <!-- Categories Section End --><!-- Footer Start -->
-       <footer>
-         <div class="footer-bottom">
-            <div class="container">
-               <p class="m-0"> &copy; 2022 - Food Guards</p>
-            </div>
-         </div>
-      </footer>
 
-      <!-- Footer End --><!-- Vendor Scripts --><script src="static/js/jquery-3.4.1.min.js"></script><script src="static/js/popper.min.js"></script><script src="static/js/waypoint.js"></script><script src="static/js/bootstrap.min.js"></script><script src="static/js/jquery.magnific-popup.min.js"></script><script src="static/js/jquery.slimScroll.min.js"></script><script src="static/js/imagesloaded.min.js"></script><script src="static/js/jquery.steps.min.js"></script><script src="static/js/jquery.countdown.min.js"></script><script src="static/js/isotope.pkgd.min.js"></script><script src="static/js/slick.min.js"></script><!-- Cookiteer Scripts --><script src="static/js/main.js"></script>
-   </body>
+
+          <!-- Instagram End --><!-- Categories Section Start -->
+           <!-- Categories Section End --><!-- Footer Start -->
+           <footer>
+             <div class="footer-bottom">
+                <div class="container">
+                   <p class="m-0"> © 2022 - Food Guards</p>
+                </div>
+             </div>
+          </footer>
+
+          <!-- Footer End --><!-- Vendor Scripts --><script src="static/js/jquery-3.4.1.min.js"></script><script src="static/js/popper.min.js"></script><script src="static/js/waypoint.js"></script><script src="static/js/bootstrap.min.js"></script><script src="static/js/jquery.magnific-popup.min.js"></script><script src="static/js/jquery.slimScroll.min.js"></script><script src="static/js/imagesloaded.min.js"></script><script src="static/js/jquery.steps.min.js"></script><script src="static/js/jquery.countdown.min.js"></script><script src="static/js/isotope.pkgd.min.js"></script><script src="static/js/slick.min.js"></script><!-- Cookiteer Scripts --><script src="static/js/main.js"></script>
+
+    </body>
 </html>
